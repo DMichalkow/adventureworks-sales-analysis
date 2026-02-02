@@ -1,0 +1,2 @@
+-- Monthly sales analysis (year / month)
+-- AdventureWorks 2019
