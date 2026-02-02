@@ -14,3 +14,10 @@ AdventureWorks 2019 sample database (Microsoft)
 ## Project structure
 - sql/ – SQL queries used in the analysis
 - insights/ – business conclusions and recommendations
+
+- ## Analyses
+
+### Monthly sales trends
+- Aggregated sales value by year and month
+- Used to identify overall trends and seasonality
+
