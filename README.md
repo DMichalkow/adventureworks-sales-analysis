@@ -15,7 +15,7 @@ AdventureWorks 2019 sample database (Microsoft)
 - sql/ – SQL queries used in the analysis
 - insights/ – business conclusions and recommendations
 
-- ## Analyses
+## Analyses
 
 ### Monthly sales trends
 - Aggregated sales value by year and month
