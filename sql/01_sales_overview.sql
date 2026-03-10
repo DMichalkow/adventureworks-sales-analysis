@@ -1,14 +1,27 @@
--- =====================================================
--- 01_sales_overview.sql
--- Monthly Revenue Analysis
--- Short-term (MoM) and Long-term (YoY) Growth
--- =====================================================
+/* =========================================================
+   01_SALES_OVERVIEW.SQL
+   SALES TREND ANALYSIS
+   =========================================================
+
+   Objective:
+   Analyze revenue performance over time and measure
+   short-term and long-term growth dynamics.
+
+   Key metrics:
+   - Monthly revenue
+   - Number of orders
+   - Average Order Value (AOV)
+   - Month-over-Month growth (MoM)
+   - Year-over-Year growth (YoY)
+
+========================================================= */
 
 
--- -------------------------------------
--- Step 1: Monthly Aggregation
--- Aggregate revenue and order volume at monthly level
--- -------------------------------------
+-- =====================================================
+-- STEP 1: Monthly Revenue Aggregation
+-- =====================================================
+-- Aggregate revenue and order volume at the monthly level
+
 WITH sales AS (
     SELECT
         YEAR(soh.OrderDate) AS sales_year,
@@ -23,10 +36,11 @@ WITH sales AS (
         MONTH(soh.OrderDate)
 ),
 
--- -------------------------------------
--- Step 2: Add Time-Based References
--- Calculate previous month and same month previous year
--- -------------------------------------
+-- =====================================================
+-- STEP 2: Time Comparison Metrics
+-- =====================================================
+-- Calculate previous month and same month last year
+
 compare AS (
     SELECT
         sales_year,
@@ -43,10 +57,11 @@ compare AS (
     FROM sales
 ),
 
--- -------------------------------------
--- Step 3: KPI Calculations
--- Compute MoM and YoY growth metrics
--- -------------------------------------
+-- =====================================================
+-- STEP 3: KPI Calculations
+-- =====================================================
+-- Calculate MoM growth, YoY growth and AOV
+
 sales_data AS (
     SELECT
         sales_year,
@@ -56,19 +71,18 @@ sales_data AS (
         previous_year_same_month,
         number_of_orders,
 
-        -- Month-over-Month Growth
         total_sales - previous_month AS mom_growth_amount,
+
         ROUND(
             (total_sales - previous_month) * 100.0 /
             NULLIF(previous_month, 0),
         2) AS mom_growth_percent,
 
-        -- Average Order Value
         CAST(total_sales AS DECIMAL(18,2)) /
             NULLIF(number_of_orders, 0) AS average_order_value,
 
-        -- Year-over-Year Growth
         total_sales - previous_year_same_month AS yoy_growth_amount,
+
         ROUND(
             (total_sales - previous_year_same_month) * 100.0 /
             NULLIF(previous_year_same_month, 0),
@@ -77,10 +91,11 @@ sales_data AS (
     FROM compare
 ),
 
--- -------------------------------------
--- Step 4: Trend Classification & Ranking
--- Categorize performance and rank months within each year
--- -------------------------------------
+-- =====================================================
+-- STEP 4: Trend Classification & Ranking
+-- =====================================================
+-- Classify growth and rank months by revenue
+
 final_data AS (
     SELECT
         sales_year,
@@ -117,10 +132,10 @@ final_data AS (
     FROM sales_data
 )
 
--- -------------------------------------
--- Final Output: Chronological View
--- -------------------------------------
+-- =====================================================
+-- FINAL RESULT
+-- =====================================================
+
 SELECT *
 FROM final_data
 ORDER BY sales_year, sales_month;
-
