@@ -68,7 +68,7 @@ Order patterns and operational performance indicators.
 
 ---
 
-### 6. Profitability Analysis (Planned)
+### 6. Profitability Analysis (Completed)
 Margin analysis and revenue quality evaluation (if cost data available).
 
 ---
