@@ -1,7 +1,7 @@
-/* =====================================================
-   CUSTOMER ANALYSIS
-   AdventureWorks 2019
-   =====================================================
+/* =========================================================
+   03_CUSTOMER_ANALYSIS.SQL
+   CUSTOMER VALUE ANALYSIS
+   =========================================================
 
    This section focuses on customer purchasing behavior
    and customer value. The goal is to identify high-value
