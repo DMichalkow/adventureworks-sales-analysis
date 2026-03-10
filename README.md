@@ -21,6 +21,31 @@ The project is structured into several analytical modules.
 
 ---
 
+## Analysis Workflow
+
+The analysis follows a structured analytical workflow starting from revenue trends and progressively drilling down into business drivers.
+
+1. **Sales Overview**  
+   Identify overall revenue trends, seasonality, and growth dynamics.
+
+2. **Product Performance**  
+   Analyze revenue contribution by product and evaluate concentration using Pareto analysis.
+
+3. **Customer Analysis**  
+   Identify high-value customers and analyze customer segmentation based on revenue.
+
+4. **Regional Analysis**  
+   Evaluate geographic revenue distribution and regional sales performance.
+
+5. **Order Behavior Analysis**  
+   Examine operational patterns such as average order value, order size, and seasonality.
+
+6. **Profitability Analysis**  
+   Evaluate business profitability by analyzing margins across products and regions.
+
+---
+
+
 ## Business Objective
 
 To identify growth patterns, revenue concentration, seasonality effects, and structural risks in order to support data-driven business decisions.
