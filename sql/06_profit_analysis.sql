@@ -1,6 +1,7 @@
-/* =====================================================
-   PROFIT ANALYSIS
-   =====================================================
+/* =========================================================
+   06_PROFIT_ANALYSIS.SQL
+   PROFITABILITY ANALYSIS
+   =========================================================
 
    This section focuses on profitability rather than
    revenue alone. The goal is to understand product
