@@ -1,6 +1,7 @@
-/* =====================================================
-   ORDER BEHAVIOUR ANALYSIS
-   =====================================================
+/* =========================================================
+   05_ORDER_BEHAVIOR.SQL
+   ORDER PATTERN ANALYSIS
+   =========================================================
 
    This section focuses on operational order behavior.
    The goal is to understand how customers place orders,
