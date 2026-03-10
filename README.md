@@ -47,7 +47,7 @@ Planned scope:
 
 ---
 
-### 3. Customer Analysis (Planned)
+### 3. Customer Analysis (Completed)
 Customer segmentation and revenue concentration.
 
 Planned scope:
@@ -58,12 +58,12 @@ Planned scope:
 
 ---
 
-### 4. Regional Analysis (Planned)
+### 4. Regional Analysis (Completed)
 Geographical revenue distribution and regional growth.
 
 ---
 
-### 5. Order Behavior Analysis (Planned)
+### 5. Order Behavior Analysis (Completed)
 Order patterns and operational performance indicators.
 
 ---
